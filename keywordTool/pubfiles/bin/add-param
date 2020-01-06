@@ -1,0 +1,49 @@
+#!/bin/bash
+
+usage() {
+  echo "Usage: $0 <param name> <param value> [section IDs ... | all]"
+}
+
+# find all Publisher Script files of a section ID and apply the requested
+# action:
+# ex: section 123456 name value
+section() {
+  find $PWD/src/code/*/$1 -name *.js ! -name *.inc.js | while read line; do
+    add "$2" "$3" "$line"
+  done
+}
+
+# add a parameter to a Publisher Script:
+# $1 - parameter name
+# $2 - parameter value
+# $3 - Publisher Script file
+add() {
+  echo "Updating: $3"
+  sed -i "/integration.params = {/a \ \ '$1': '$2'," $3
+}
+
+PARAM_NAME="$1"; shift
+PARAM_VALUE="$1"; shift
+
+# make sure parameter name and value are specified:
+if [[ -z "$PARAM_NAME" ]] || [[ -z "$PARAM_VALUE" ]]; then
+  usage
+  exit 1
+fi
+
+# read section IDs from command line arguments or STDIN:
+if [[ -z $@ ]]; then
+  while read line; do
+    section "$line" "$PARAM_NAME" "$PARAM_VALUE"
+  done
+else
+  if [[ "$@" = "all" ]]; then
+    find $PWD/src/code -name *.js ! -name *.inc.js | while read line; do
+      add "$PARAM_NAME" "$PARAM_VALUE" "$line"
+    done
+  else
+    for p in "$@"; do
+      section "$p" "$PARAM_NAME" "$PARAM_VALUE"
+    done
+  fi
+fi

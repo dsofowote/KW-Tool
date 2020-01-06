@@ -1,0 +1,2 @@
+integration.whiteRootDomains = ['inquirer.net','newsinfo.inquirer.net','lifestyle.inquirer.net','entertainment.inquirer.net','bandera.inquirer.net','sports.inquirer.net','business.inquirer.net','cebudailynews.inquirer.net','usa.inquirer.net','globalnation.inquirer.net','globalnation.inquirer.net','technology.inquirer.net','motioncars.inquirer.net','libre.inquirer.net','esports.inquirer.net'];
+integration.blackSubDomains = [];

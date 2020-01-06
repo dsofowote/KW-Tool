@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SRC="$1"
+
+if [ -z "$SRC" ]; then
+  echo "Usage: $0 <input file>"
+  exit 1
+fi
+
+uglifyjs $SRC

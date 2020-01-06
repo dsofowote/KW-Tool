@@ -1,0 +1,74 @@
+var sensitive_DEPandora = {
+   sources: ['url', 'title', 'keywords', 'page'],
+   keywords: {}
+}
+kwLists.push(sensitive_DEPandora);
+
+/* Actual keyword list */
+sensitive_DEPandora.keywords["krieg"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["waffen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["trump"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["todlich"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["radikal"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["kampf"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["rassist"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["putin"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["terror"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["terrorist"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["syrien"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["rassismus"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["terrormiliz"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["boko haram"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["bombe"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["anschlag"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["angriff"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["opfer"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["vergewaltigung"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["vergewaltieger"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["mord"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["tod"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["toten"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["killer"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["afd"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["strafe"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["israel"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["tote"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["sterben"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["damaskus"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["antiterror"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["kampfen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["blutig"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["sprengstoff"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["sprengsatz"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["is"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["krise"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["gazastreifen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["katastrophe"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["islamischer staat"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["kriminalität"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["flucht"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["fusspilz"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["hautausschlag"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["pickel"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["herpes"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["lippenherpes"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["warzen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["hamorrhoiden"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["erbrechen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["durchfall"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["husten"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["schnupfen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["schüttelfrost"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["fieber"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["magen-darm"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["tinnitus"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["halsschmerzen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["gliederschmerzen"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["bakterien"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["pilzbefall"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["ausschlag"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["wunde"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["eiter"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["pilz"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["sex"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};
+sensitive_DEPandora.keywords["geschlechtsverkehr"] = {'keyword': 'sensitive_DEPandora', 'fullWord': true};

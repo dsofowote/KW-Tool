@@ -1,0 +1,31 @@
+#!/bin/sh
+
+FILEPATH=$1
+
+CDNPATH="http://cdn.inskinmedia.com/isfe/publishercode"
+
+SCRIPTPATH=$(cd $(dirname $0); pwd -P)
+BASEPATH=$(dirname $SCRIPTPATH)
+
+# CDN size:
+CDNSIZE=`curl -sI $CDNPATH/$FILEPATH | grep -i 'Content-Length' | awk '{print $2+0}'`
+
+# Local size:
+LOCALSIZE=$(stat -c %s $BASEPATH/out/min/$FILEPATH)
+
+# Source:
+SRC=`find $BASEPATH/src/code -path "*$FILEPATH"`
+
+if [ -z "$CDNSIZE" ]
+then
+  echo "missing"
+  echo "$SRC" >> $BASEPATH/tmp/cdncheck-missing.txt
+else
+  if [ $CDNSIZE -ne $LOCALSIZE ]
+  then
+    echo "different"
+    echo "$SRC" >> $BASEPATH/tmp/cdncheck-different.txt
+  else
+    echo "ok"
+  fi
+fi

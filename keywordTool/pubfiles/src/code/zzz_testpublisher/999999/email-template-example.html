@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Email template example</title>
+		<style type="text/css">
+			body {
+				font-family: arial, helvetica, sans-serif;
+				padding-top: 0 !important;
+				padding-bottom: 0 !important;
+				padding-top: 0 !important;
+				padding-bottom: 0 !important;
+				margin: 0 !important;
+				width: 100% !important;
+				-webkit-text-size-adjust: 100% !important;
+				-ms-text-size-adjust: 100% !important;
+				-webkit-font-smoothing: antialiased !important;
+			}
+			.tableContent img {
+				border: 0 !important;
+				display: block !important;
+				outline: none !important;
+			}
+
+			p, h1, h3, ul, ol, li, div {
+				margin: 0;
+				padding: 0;
+			}
+
+			h1, h3 {
+				font-weight: normal;
+				background: transparent !important;
+				border: none !important;
+			}
+
+			@media only screen and (max-width: 480px) {
+
+				table[class="MainContainer"], td[class="cell"] {
+					width: 100% !important;
+					height: auto !important;
+				}
+				td[class="specbundle"] {
+					width: 100% !important;
+					float: left !important;
+					font-size: 13px !important;
+					line-height: 17px !important;
+					display: block !important;
+					padding-bottom: 15px !important;
+				}
+				td[class="specbundle2"] {
+					width: 80% !important;
+					float: left !important;
+					font-size: 13px !important;
+					line-height: 17px !important;
+					display: block !important;
+					padding-bottom: 10px !important;
+					padding-left: 10% !important;
+					padding-right: 10% !important;
+				}
+
+				td[class="spechide"] {
+					display: none !important;
+				}
+				img[class="banner"] {
+					width: 100% !important;
+					height: auto !important;
+				}
+				td[class="left_pad"] {
+					padding-left: 15px !important;
+					padding-right: 15px !important;
+				}
+
+			}
+
+			@media only screen and (max-width: 540px) {
+
+				table[class="MainContainer"], td[class="cell"] {
+					width: 100% !important;
+					height: auto !important;
+				}
+				td[class="specbundle"] {
+					width: 100% !important;
+					float: left !important;
+					font-size: 13px !important;
+					line-height: 17px !important;
+					display: block !important;
+					padding-bottom: 15px !important;
+				}
+				td[class="specbundle2"] {
+					width: 80% !important;
+					float: left !important;
+					font-size: 13px !important;
+					line-height: 17px !important;
+					display: block !important;
+					padding-bottom: 10px !important;
+					padding-left: 10% !important;
+					padding-right: 10% !important;
+				}
+
+				td[class="spechide"] {
+					display: none !important;
+				}
+				img[class="banner"] {
+					width: 100% !important;
+					height: auto !important;
+					margin: 0 auto;
+					max-width: 100%;
+				}
+				td[class="left_pad"] {
+					padding-left: 15px !important;
+					padding-right: 15px !important;
+				}
+
+			}
+
+			.contentEditable h3.big, .contentEditable h1.big {
+				font-size: 26px !important;
+			}
+
+			.contentEditable h3.bigger, .contentEditable h1.bigger {
+				font-size: 37px !important;
+			}
+
+			td, table {
+				vertical-align: top;
+			}
+			td.middle {
+				vertical-align: middle;
+			}
+
+			a.link1 {
+				font-size: 13px;
+				color: #521D49;
+				line-height: 24px;
+				text-decoration: none;
+			}
+			a {
+				text-decoration: none;
+			}
+
+			.link2 {
+				color: #ffffff;
+				border-top: 8px dotted #521D49;
+				border-bottom: 8px dotted #521D49;
+				border-left: 18px dotted #521D49;
+				border-right: 18px dotted #521D49;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				background: #521D49;
+			}
+			.link5 {
+				color: #ffffff;
+				border-top: 10px dotted #DDDDDD;
+				border-bottom: 10px dotted #DDDDDD;
+				border-left: 18px dotted #DDDDDD;
+				border-right: 18px dotted #DDDDDD;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				background: #521D49;
+			}
+
+			.link3 {
+				color: #555555;
+				border: 2px dotted #cccccc;
+				padding: 10px 18px;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				background: #ffffff;
+			}
+
+			.link4 {
+				color: #521D49;
+				line-height: 24px;
+			}
+
+			h3, h1 {
+				line-height: 20px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 21px;
+				color: #6a6a6a;
+			}
+			.bgItem {
+				background: #ffffff;
+			}
+			.bgBody {
+				background: #ffffff;
+			}
+
+			img {
+				outline: none;
+				text-decoration: none;
+				-ms-interpolation-mode: bicubic;
+				width: auto;
+				max-width: 100%;
+				margin: 0;
+				clear: both;
+				display: block;
+				float: none;
+			}
+			.banner {
+				margin: 0 auto;
+			}
+
+		</style>
+
+	</head>
+	<body paddingwidth="0" paddingheight="0" bgcolor="#d1d3d4" style="padding-top: 0; padding-bottom: 0; padding-top: 0; padding-bottom: 0; background-repeat: repeat; width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased;" offset="0" toppadding="0" leftpadding="0" data-gr-c-s-loaded="true">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td>
+					<table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;">
+						<tbody>
+							<tr>
+								<td style="background-color:transparent;line-height:1.5;padding:10px 10px 10px 10px;"><span>
+									<table align="center" class="emailheader" width="550">
+										<tbody>
+											<tr>
+												<td align="middle"><font face="Arial" size="1">If you are having trouble viewing this email, <a href="http://s940940655.t.en25.com/e/es?s=940940655&amp;e=755&amp;elqTrackId=78D8A052C380BCBFF284D754BEBE9730&amp;elq=656c39d161344f6ea54f82aa806fff00&amp;elqaid=181&amp;elqat=1">read the online version</a>. </font></td>
+											</tr>
+										</tbody>
+									</table> </span></td>
+							</tr>
+						</tbody>
+					</table></td>
+				</tr>
+				<tr>
+					<td>
+					<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff" style="font-family:Arial;" class="MainContainer">
+						<!-- =============== START HEADER =============== -->
+						<tbody>
+							<tr>
+								<td style="background-color: #521D49;line-height:1.5;padding:0px 0px 0px 0px;">
+								<center>
+									<table width="100%">
+										<tbody>
+											<tr>
+												<td style="">
+												<div style="display:none;">
+													&nbsp;
+												</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</center></td>
+							</tr>
+							<tr>
+								<td>
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr>
+											<td valign="top" width="20">&nbsp;</td>
+											<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<td class="movableContentContainer">
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tbody>
+
+																	<tr>
+																		<td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																			<tbody>
+
+																				<tr>
+
+																					<td valign="top">
+																					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																						<tbody>
+
+																							<tr>
+																								<td valign="top" width="60"><img src="https://ci6.googleusercontent.com/proxy/umn6UdLgfnMXq6lfRG3voOf5xroG_0_GfDIqZWuVnIT3fs7eU73AgHGv-QOu-0nhjcPde1LcWKghyAcjTjWgWjyQo49z2_8hkgvaP8nOlHPFq4waMtBFqfo-hyFobZt6p4rP6b5OWVn1JTbzGGh6jciTEsx9Qe-xyMBM6_nJ2jLLF1pAAt5FodzO6iuRA4aihkj7GeCGnf8vIA=s0-d-e1-ft#http://img06.en25.com/EloquaImages/clients/InskinMediaLtd/%7Bd4ee1641-fc40-4807-8fe2-1c16ce39a427%7D_Inskin_Tagline_Colour_250w.png" alt="Logo" title="Logo" width="210" height="99" data-max-width="210"></td>
+
+																							</tr>
+																						</tbody>
+																					</table></td>
+
+																					<td valign="middle" style="vertical-align: middle;" width="250">
+																					<div class="contentEditableContainer contentTextEditable">
+																						<div class="contentEditable" style="text-align: right;">
+																							<h1 style="vertical-align: middle; font-size: 19px;"><b>CNG - Desktop - (DE)</b>
+																						</div>
+																					</div></td>
+																				</tr>
+																			</tbody>
+																		</table></td>
+																	</tr>
+
+																</tbody>
+															</table>
+														</div><!-- =============== END HEADER =============== --><!-- =============== START BODY =============== -->
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tbody>
+																	<tr>
+																		<td style="border-top: 2px dotted #DDDDDD; border-bottom: 2px dotted #DDDDDD; border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px">
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																			<tbody>
+																				<tr>
+																					<td valign="top" width="40">&nbsp;</td>
+																					<td>
+																					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+																						<tbody>
+																							<tr>
+																								<td>
+																								<div class="contentEditableContainer contentTextEditable">
+																									<div class="contentEditable" style="text-align: center;">
+																										<h2 style="font-size: 20px; font-weight: 500;">TEST AD TAG</h2>
+																										<p style="margin-bottom: 10px;">
+																											Please read the information below as it contains important instructions on your campaign configuration.
+																										</p>
+
+																										<br>
+																										<a target="_blank" href="#" class="link2" style="color:#ffffff">Download Test Tag</a>
+																										<br>
+																									</div>
+																								</div></td>
+																							</tr>
+																							<tr>
+																								<td height="24"></td>
+																							</tr>
+																						</tbody>
+																					</table></td>
+																					<td valign="top" width="40">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table></td>
+																	</tr>
+																</tbody>
+															</table>
+
+														</div>
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tbody>
+
+																	<tr>
+																		<td height="30"></td>
+																	</tr>
+																	<tr>
+																		<td valign="top" width="580">
+																		<div class="contentEditableContainer contentImageEditable">
+																			<div class="contentEditable" style="text-align: center;"><img class="banner" src="https://preview.ibb.co/iEMeA8/Capture1.png" alt="Logo" title="Creative" width="640" height="275" border="0">
+																			</div>
+																		</div></td>
+																	</tr>
+																</tbody>
+															</table>
+
+														</div>
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tbody>
+																	<tr>
+																		<td><h3 style="text-align: left;margin: 6px 0;font-size: 18px;">Targeting Instructions</h3></td>
+																	</tr>
+																	<tr>
+																		<td>
+																		<table width="100%" cellspacing="0" cellpadding="0" style="padding: 20px 5px; border: 2px dotted #e5e5e5;">
+																			<tbody>
+																				<tr>
+																					<td class="specbundle" valign="top" width="142" align="center">
+																					<div class="contentEditableContainer contentImageEditable">
+																						<div class="contentEditable">
+																							<img src="http://techops.inskinmedia.com/~rivanov/testpages/test/email-icons/Picture2.png" alt="side image" data-default="placeholder" border="0" style="padding: 20px; border-radius: 50%; width: 80px; border: 2px dotted #dedede; height: 80px;">
+																						</div>
+																					</div></td>
+																					<td width="20" valign="top" class="spechide"></td>
+																					<td class="specbundle">
+																					<table width="100%" cellpadding="0" cellspacing="0" align="center">
+																						<tbody>
+
+																							<tr>
+																								<td>
+																								<div class="contentEditableContainer contentTextEditable">
+																									<div class="contentEditable" style="text-align: left;">
+																										<h3 style="font-size:17px; font-weight: bold;">Screen Resolution Targeting</h3>
+																										<br>
+																										<p>
+																											Target screen resolution widths of <b>1460 pixels</b> and greater. Further details about implementing this can be found below
+																										</p>
+																										<br>
+																										<a target="_blank" href="http://kb.inskinmedia.com/kb/producttechnical/pageskinfaq#old1489504" class="link2" >Read More</a>
+																									</div>
+																								</div></td>
+																							</tr>
+																						</tbody>
+																					</table></td>
+																				</tr>
+																			</tbody>
+																		</table></td>
+																	</tr>
+																</tbody>
+															</table>
+
+														</div>
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tbody>
+
+																	<tr>
+																		<td>
+																		<table width="100%" cellspacing="0" cellpadding="0" style="padding: 20px 5px;
+																		border: 2px dotted #e5e5e5; border-top: none;">
+																			<tbody>
+																				<tr>
+																					<td width="20" class="spechide">&nbsp;</td>
+																					<td valign="top" class="specbundle">
+																					<table width="100%" cellpadding="0" cellspacing="0" align="center">
+																						<tbody>
+
+																							<tr>
+																								<td>
+																								<div class="contentEditableContainer contentTextEditable">
+																									<div class="contentEditable" style="text-align: left;">
+																										<h3 style="font-size:17px; font-weight: bold;">Operating Systems</h3>
+																										<br>
+																										<p>
+																											Only target the following desktop operating systems:
+																										</p>
+																										<p>
+																											* Windows (except Windows RT)
+																										</p>
+																										<p>
+																											* Mac OS
+																										</p>
+																										<p>
+																											* Linux
+																										</p>
+
+																									</div>
+																								</div></td>
+																							</tr>
+																						</tbody>
+																					</table></td>
+
+																					<td class="specbundle" valign="top" width="142" align="center">
+																					<div class="contentEditableContainer contentImageEditable">
+																						<div class="contentEditable">
+																							<img src="http://techops.inskinmedia.com/~rivanov/testpages/test/email-icons/Picture4.png" alt="side image" width="142" height="142" data-default="placeholder" border="0" style="padding: 20px; border-radius: 15%; width: 80px; border: 2px dotted #dedede; height: 80px;">
+																						</div>
+																					</div></td><td width="20" class="spechide">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table></td>
+																	</tr>
+																</tbody>
+															</table>
+
+														</div>
+														<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tbody>
+
+																	<tr>
+																		<td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-left: 2px dotted #e5e5e5; border-right: 2px dotted #e5e5e5; padding: 20px 5px;">
+																			<tbody>
+																				<tr>
+																					<td class="specbundle" valign="top" width="142" align="center">
+																					<div class="contentEditableContainer contentImageEditable">
+																						<div class="contentEditable">
+																							<img src="http://techops.inskinmedia.com/~rivanov/testpages/test/email-icons/Picture3.png" alt="side image" data-default="placeholder" border="0" style="padding: 20px; border-radius: 50%; width: 80px; border: 2px dotted #dedede; height: 80px;">
+																						</div>
+																					</div>
+														</div></td>
+														<td width="20" valign="top" class="spechide"></td>
+														<td class="specbundle">
+														<table width="100%" cellpadding="0" cellspacing="0" align="center" >
+															<tbody>
+																<tr>
+																	<td height="15"></td>
+																</tr>
+																<tr>
+																	<td>
+																	<div class="contentEditableContainer contentTextEditable">
+																		<div class="contentEditable" style="text-align: left;">
+																			<h3 style="font-size:17px; font-weight: bold;">Browsers</h3>
+
+																			<br>
+																			<p>
+																				* Exclude Internet Explorer 10 and below.
+																			</p>
+																		</div>
+																	</div></td>
+																</tr>
+															</tbody>
+														</table></td>
+													</tr>
+												</tbody>
+											</table></td>
+										</tr>
+									</tbody>
+								</table></div><!-- =============== END BODY =============== --><!-- =============== START FOOTER =============== -->
+								<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px;border-left: 2px dotted #e5e5e5;padding: 10px;border-right: 2px dotted #e5e5e5;border-top: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">DFP Specific:</b>&nbsp; Please disable the "Serve into a SafeFrame" option while setting up our tag in your ad server.
+												</p></td>
+											</tr>
+
+											<tr>
+												<td class="silver-box" style="border-radius: 3px; border: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">ADS.txt:</b>&nbsp; Please implement our reseller ID, our entry is as follows:
+												</p>
+												<br>
+												<p>
+													<b style="font-style: italic;"> - indexexchange.com, 184665, RESELLER, 50b1c356f2c5c8fc</b>
+												</p></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px; border-left: 2px dotted #e5e5e5;padding: 10px;border-right: 2px dotted #e5e5e5; border-bottom: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">Ensure that your Pageskin ad tag is not served at the same time as competing formats.</b>
+													<br>
+													For detail about formats that we consider to be competing please refer to our FAQ.
+													<br>
+													<a target="_blank" href="https://kb.inskinmedia.com/kb/producttechnical/pageskinfaq#fsm1489504" class="link2" style="display: inline-block; margin-top: 15px;">Read More</a>
+												</p></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px; border-left: 2px dotted #e5e5e5;padding: 10px;border-right: 2px dotted #e5e5e5; border-bottom: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">Pageskin FAQ</b> - For additional information, please refer to our frequently asked questions page.
+												</p><a target="_blank" href="http://kb.inskinmedia.com/kb/producttechnical/pageskinfaq" class="link2" style="display: inline-block; margin-top: 15px;">Read More</a></td>
+											</tr>
+											<tr>
+												<td height="35"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody>
+											<tr>
+												<td><h3 style="text-align: left;margin: 6px 0;font-size: 18px;">Setting up your Pageskin campaign</h3></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px;border-left: 2px dotted #e5e5e5;padding: 10px;border-right: 2px dotted #e5e5e5;border-top: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">Ad Trafficking Methods:</b>&nbsp; We require the use of ad servers as this allows you to manage, filter and control campaigns efficiently.
+												</p></td>
+											</tr>
+
+											<tr>
+												<td class="silver-box" style="border-radius: 3px; border: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">Ad placement:</b>&nbsp; Any rich media placement that is able to deliver a JavaScript creative can be used to serve the Pageskin Tag. For many publishers this is likely to be a 1x1 or out-of-page placement.
+												</p>
+												<br>
+												<p>
+													As our skin does not sit in the iframe we are served into, the slot will leave a whitespace, please let us know if you required us to collapse this whitespace when our skin serves.
+												</p></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px; border-left: 2px dotted #e5e5e5;padding: 10px;border-right: 2px dotted #e5e5e5;border-bottom: 2px dotted #e5e5e5; padding: 10px;">
+												<p>
+													<b style="color: #000;">Layout Support:</b>&nbsp; This integration only works with the layout of your homepage. Let us know if there are other layouts you would like us to support.
+												</p></td>
+											</tr>
+											<tr>
+
+											</tr>
+											<tr>
+												<td height="35"></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<!-- =============== END FOOTER =============== -->
+								</div>
+								<div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody>
+											<tr>
+												<td><h3 style="text-align: left;margin: 6px 0;font-size: 18px;">Testing the integration</h3></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px;border: 2px dotted #e5e5e5;padding: 10px;">
+												<p>
+													Serve the campaign to a test page or a live page with cookie or IP targeting <b style="color: #000;">(194.74.140.165)</b>. This is important so that the test campaign is not delivered to your users.
+												</p>
+												<br>
+												<p>
+													<b style="color: #000;">DFP specific:</b>&nbsp; Please do not use the option the DFP preview a creative for creating a test page as it does not support targeting and part of the testing is to check that the targeting settings have been set up correctly. This is important as we can only monetise an impression when it meets our targeting criteria.
+												</p>
+												<br>
+												<p>
+													Once this is complete email your Integration Engineer a link to the page where you are serving the Pageskin campaign.
+												</p></td>
+											</tr>
+											<tr>
+												<td class="silver-box" style="border-radius: 3px;border-bottom: 2px dotted #e5e5e5; border-left: 2px dotted #e5e5e5; border-right: 2px dotted #e5e5e5;padding: 10px;">
+												<p>
+													<b style="color: #000;">Important note: </b>This test tag should NOT be served to your live site. You will be sent a new ad-tag for live campaigns.
+												</p></td>
+											</tr>
+											<tr>
+												<td height="35"></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<!-- =============== END FOOTER =============== -->
+								</div></td>
+							</tr>
+						</tbody>
+					</table></td>
+					<td valign="top" width="20">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table></td>
+		</tr>
+		<tr>
+			<td>
+			<table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;">
+				<tbody>
+					<tr>
+						<td style="background-color:transparent;line-height:1.5;padding:0px 0px 0px 0px;"><span>
+							<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;background:#521D49;" width="100%">
+								<tbody>
+									<tr>
+										<td align="right" height="155" style="border-collapse:collapse;line-height:1.4;font-family:Arial, Helvetica, sans-serif;font-size:12.6px;color:#BCAD75;"><a data-targettype="webpage" href="http://www.inskinmedia.com/?elqTrackId=41af05f12b414edc8b1c0375df25b02d&amp;elq=656c39d161344f6ea54f82aa806fff00&amp;elqaid=181&amp;elqat=1&amp;elqCampaignId=82" style="color:#BCAD75;text-decoration:none;" target="_blank"><img alt="Inskin Media Logo" src="&#10;http://www.inskinmedia.com/html/wp-content/email-img/logo.jpg" style="margin-bottom: 0px; margin-top: 10px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none;" width="200"></a>
+										<br>
+										<a href="http://www.inskinmedia.com/?elqTrackId=21eafdd27a2b4d94a9e6e7da225c9e2d&amp;elq=656c39d161344f6ea54f82aa806fff00&amp;elqaid=181&amp;elqat=1&amp;elqCampaignId=82" style="color:#BCAD75;text-decoration:none;" target="_blank">© 2018 Inskin Media Ltd
+										<br>
+										233 High Holborn, London, WC1V 7DN
+										<br>
+										All rights reserved</a>
+										<br>
+										<a href="http://www.inskinmedia.com/brand-safety-policy/?elqTrackId=e742cc6a56694940b69767d5211bbe76&amp;elq=656c39d161344f6ea54f82aa806fff00&amp;elqaid=181&amp;elqat=1&amp;elqCampaignId=82" style="color:#BCAD75;text-decoration:none;" target="_blank">Brand Safety</a>, <a href="http://www.inskinmedia.com/privacy-policy.html?elqTrackId=196dc65371234f8c955205a59bf08158&amp;elq=656c39d161344f6ea54f82aa806fff00&amp;elqaid=181&amp;elqat=1&amp;elqCampaignId=82" style="color:#BCAD75;text-decoration:none;" target="_blank">Privacy Policy</a>
+										<br>
+										<br>
+										</td>
+										<td height="20">&nbsp;</td>
+										<td style="border-collapse:collapse;line-height:1px;font-size:1px;" width="20">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table> <!-- divider -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tbody>
+									<tr>
+										<td height="55" style="background-color:#521D49;background-image:url('http://www.inskinmedia.com/html/wp-content/email-img/div.png');">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table> <!--end of footer divider--></span></td>
+					</tr>
+				</tbody>
+			</table></td>
+		</tr>
+		</tbody>
+		</table></td>
+		</tr>
+		</tbody>
+		</table>
+
+	</body>
+</html>

@@ -1,0 +1,94 @@
+#!/bin/bash
+
+usage() {
+  echo "Usage: $0 <add|del> <dependency file> [section IDs ... | all]"
+}
+
+# find all Publisher Script files of a section ID and apply the requested
+# action:
+# ex: section 123456 add dependency.js
+section() {
+  find $PWD/src/code/*/$1 -name *.js ! -name *.inc.js | while read line; do
+    dep_$2 "$3" "$line"
+  done
+}
+
+# add a dependency file to a Publisher Script:
+# $1 - dependency file
+# $2 - Publisher Script file
+dep_add() {
+  f=$(dep_file $2)
+  echo "Updating: $f"
+  del_line $1 $f
+  add_line $1 $f
+}
+
+# remove a dependency file from a Publisher Script:
+# $1 - dependency file
+# $2 - Publisher Script file
+dep_del() {
+  f=$(dep_file $2)
+  echo "Updating: $f"
+  del_line $1 $f
+  if [ ! -s $f ]; then
+    echo "Deleting empty file: $f"
+    rm -f $f
+  fi
+}
+
+# add a line to a file:
+add_line() {
+  echo "" >> $2
+  echo $1 >> $2
+}
+
+# remove lines that match the given pattern from a file:
+del_line() {
+  pattern=${1//./\\.}
+  pattern=${pattern//\//\\\/}
+  if [ -f $2 ]; then
+    sed -i "/$pattern/d" $2
+  fi
+}
+
+# given a Publisher Script path, generate its .dep path:
+dep_file() {
+  echo "${1%.*}.dep"
+}
+
+CMD="$1"; shift
+DEP="$1"; shift
+
+# make sure command and dependency file are specified:
+if [[ -z "$CMD" ]] || [[ -z $DEP ]]; then
+  usage
+  exit 1
+fi
+
+# make sure command is valid:
+if [[ "$CMD" != "add" && "$CMD" != "del" ]]; then
+  usage
+  exit 1
+fi
+
+# if $DEP doesn't start with a . or / assume it's relative to src/ dir:
+if [[ ! $DEP =~ ^(\.|/) ]]; then
+  DEP="../../../$DEP"
+fi
+
+# read section IDs from command line arguments or STDIN:
+if [[ -z $@ ]]; then
+  while read line; do
+    section "$line" "$CMD" "$DEP"
+  done
+else
+  if [[ "$@" = "all" ]]; then
+    find $PWD/src/code -name *.js ! -name *.inc.js | while read line; do
+      dep_$CMD "$DEP" "$line"
+    done
+  else
+    for p in "$@"; do
+      section "$p" "$CMD" "$DEP"
+    done
+  fi
+fi

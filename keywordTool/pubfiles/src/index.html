@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keyword Lookup Tool | Inskin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/timezones.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="jquery.json2html.js"></script>
+    <script src="json2html.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <script src="js/timezones.js"></script>
+<div class="slide-wrapper">
+    <div class="main-wrapper keyList">
+        <div class="top-bar">
+            <div class="bottom-decal">
+            </div>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="title">Keyword List Tool - Sections by Keyword List</div>
+            <div class="title-line pre-transit-f"></div>
+        </div>
+
+
+        <div class="top-el" style="margin: 0 auto">
+            <div class="col-md-4 panel no-pad pre-transit-f scrollable contentBox">
+                <div class="panel-title">Keyword List</div>
+                <div class="sub-title">Select a Keyword List to return all sections using the selected block list</div>
+                <div class="row">
+                    <div class="col-md-12 key-title-header">
+                        List Name
+                        <span class="keyLengthHeader">Weight & Scan Type</span>
+                    </div>
+                    <div class="col-md-12 keywordList" style="margin:0 auto">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 panel no-pad pre-transit-f scrollable sectionBox">
+                <div class="panel-title">Section List</div>
+                <div class="sub-title">List of sections set up under the selected keyword block list</div>
+                <div class="sub-title alt"></div>
+                <div class="row">
+                    <div class="col-md-12" style="margin:0 auto">
+                        <div class="populate">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 panel">
+                    <div class="zone-item keyPage">Sections By Keyword List</div>
+                    <div class="zone-item sectPage">Keyword Lists By Section</div>
+                    <div class="zone-item wordPage">Word Exclusions By Keyword List</div>
+            </div>
+    </div>
+    
+    </div>
+
+    <div class="main-wrapper sectionList">
+        <div class="top-bar">
+            <div class="bottom-decal">
+            </div>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="title">Keyword List Tool - Keyword Lists by Section</div>
+            <div class="title-line pre-transit-f"></div>
+        </div>
+
+
+        <div class="top-el" style="margin: 0 auto">
+            <div class="col-md-4 panel no-pad pre-transit-f ">
+                <div class="panel-title">Filter by Section ID</div>
+                <div class="sub-title">Enter a section ID below and press search to return keyword Lists</div>
+                <div class="">
+                    <div class="col-md-12 sectList" style="margin:0 auto">
+                        <div class="col-md-3 searchButton">Search</div>
+                        <input class="searchBar col-md-9" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 panel no-pad pre-transit-f scrollable keywordBox">
+                <div class="panel-title">Keyword Lists</div>
+                <div class="sub-title">Keyword Lists assigned to the given section ID displayed below</div>
+                <div class="sub-title alt"></div>
+                <div class="row">
+                    <div class="col-md-12" style="margin:0 auto">
+                        <div class="populateKeys">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 panel">
+                    <div class="zone-item keyPage">Sections By Keyword List</div>
+                    <div class="zone-item sectPage">Keyword Lists By Section</div>
+                    <div class="zone-item wordPage">Word Exclusions By Keyword List</div>
+            </div>
+    </div>
+    </div>
+
+    <div class="main-wrapper wordList">
+        <div class="top-bar">
+            <div class="bottom-decal">
+            </div>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="title">Keyword List Tool - Exclusion Lists</div>
+            <div class="title-line pre-transit-f"></div>
+        </div>
+
+
+        <div class="top-el" style="margin: 0 auto">
+            <div class="col-md-4 panel no-pad pre-transit-f scrollable contentBox">
+                <div class="panel-title">Keyword List</div>
+                <div class="sub-title">Select a List to return all words using that selected block list</div>
+                <div class="row">
+                    <div class="col-md-12 key-title-header">
+                        List Name
+                        <span class="keyLengthHeader">Weight & Scan Type</span>
+                    </div>
+                    <div class="col-md-12 keywordList-2" style="margin:0 auto">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 panel no-pad pre-transit-f scrollable sectionBox">
+                <div class="panel-title">Exclusion List</div>
+                <div class="sub-title">List of words set up under the selected keyword block list</div>
+                <div class="sub-title alt"></div>
+                <div class="row">
+                    <div class="col-md-12" style="margin:0 auto">
+                        <div class="populateWords">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 panel">
+                    <div class="zone-item keyPage">Sections By Keyword List</div>
+                    <div class="zone-item sectPage">Keyword Lists By Section</div>
+                    <div class="zone-item wordPage">Word Exclusions By Keyword List</div>
+            </div>
+    </div>
+    
+    </div>
+    <div class="bottom-decal">
+        <!-- <div class="footer">
+            <footer>© Copyright  Inskin Media LTD - All Rights Reserved</footer>
+        </div> -->
+    </div>
+</div>
+    
+
+</body>
+<script src="main.js"></script>
+
+</html>

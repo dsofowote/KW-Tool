@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+if (!(count($argv) > 1)) {
+  usage();
+}
+
+$root_dir = realpath(dirname(__FILE__) . '/../');
+chdir($root_dir);
+$cmd = 'make ' . implode(' ', array_map('map', array_slice($argv, 1)));
+passthru($cmd, $ret);
+
+if ($ret != 0) {
+  die("Make process didn't complete successfully, quitting!\n");
+}
+
+passthru("$root_dir/bin/rsyncdeploy $root_dir/dpl");
+
+passthru("rm -rf $root_dir/dpl/*");
+
+
+function map($target) {
+  return "$target-deploy";
+}
+
+// print help and exit:
+function usage() {
+  global $argv;
+  print implode("\n", array(
+    "Usage: $argv[0] <target>",
+    '',
+    'Valid targets are:',
+    '',
+    '  all            - deploy all files',
+    '  <publisher>    - deploy all files of specified publisher',
+    '  <section>      - deploy all files of specified section',
+    '',
+    ''
+  ));
+  exit();
+}

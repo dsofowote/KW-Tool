@@ -1,0 +1,59 @@
+var sensitive_betway = { 
+    sources : ['url', 'title', 'keywords', 'page'], 
+    keywords: {} 
+} 
+kwLists.push(sensitive_betway); 
+
+sensitive_betway.keywords['gv adult'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv arms'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv crime'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv death injury'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv download'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv drugs'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv hatespeech'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv military'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv obscenity'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv terrorism'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gv tobacco'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['neg kids kwb'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['addiction'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling addiction'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['problem'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['risk'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling epidemic'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling sponsorship'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['banned'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['crisis'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling adverts'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['epidemic'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['addict'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['vulnerable customer'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['fail'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['customers'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['problem gamblers'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['duplicate account'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['fine'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['misleading'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['complaints'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['unacceptable'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['regulators'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['child gambling'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling habit'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['declining footfall'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['slump'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['betting shop profit'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['fall'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['regulatory changes'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['malta'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['malta'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['per cent down'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['profit drop'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['blame'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['mario kart'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['mario kart app'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['targeting kids'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['nintendo'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['gambling commission'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['fobts'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['crackdown'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 
+sensitive_betway.keywords['investigation'] = {'keyword': 'sensitive_betway', 'fullWord': false}; 

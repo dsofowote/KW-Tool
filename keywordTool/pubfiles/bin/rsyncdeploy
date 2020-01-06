@@ -1,0 +1,159 @@
+#!/usr/bin/env php
+<?php
+
+//
+// deploy files via lftp
+// 
+
+$rsync = '/usr/bin/rsync';
+
+// where to deploy files from:
+$cwd = (isset($argv[1]) ? realpath($argv[1]) : getcwd());
+$root_dir = realpath(dirname(__FILE__) . '/../');
+
+// create the initial list of files that should be deployed:
+$files = array();
+if (file_exists("$cwd/.deploy-files")) {
+	$paths = array();
+	$lines = file("$cwd/.deploy-files");
+	foreach ($lines as $path) {
+		$path = preg_replace('/\r|\n/', '', $path);
+		if (file_exists($path)) {
+			$p = realpath($path);
+			if (!in_array($p, $paths)) $paths[] = $p;
+		}
+		elseif (file_exists("$cwd/$path")) {
+			$p = realpath("$cwd/$path");
+			if (!in_array($p, $paths)) $paths[] = $p;
+		}
+	}
+	add_files($paths);
+}
+else {
+	add_files(glob("$cwd/*"));
+}
+
+// create the patterns that we'll use to exclude files from the transfer list:
+$excludes_str = '';
+$patterns = array('*.deploy*', '*.ftpdeploy*', '*.swp', '*%*.php', '*.tpl.php', '*.log', '*.svn/*');
+if (file_exists("$cwd/.deploy-exclude")) {
+	$lines = file("$cwd/.deploy-exclude");
+	foreach ($lines as $pattern) {
+		$pattern = preg_replace('/\r|\n/', '', $pattern);
+		if (is_dir("$cwd/$pattern")) {
+			$patterns[] = "$pattern/";
+		}
+		elseif (is_file("$cwd/$pattern")) {
+			$patterns[] = $pattern;
+		}
+		else {
+			$patterns[] = '*' . $pattern . '*';
+		}
+	}
+}
+foreach ($patterns as $pattern) {
+	$excludes_str .= " -X $pattern";
+}
+
+// create the final list of files to be transfered:
+$files_to_transfer = array();
+foreach ($files as $file) {
+	$sw = true;
+	foreach ($patterns as $pattern) {
+		if (fnmatch($pattern, $file)) {
+			$sw = false;
+			break;
+		}
+	}
+	if ($sw) {
+		$files_to_transfer[] = $file;
+	}
+}
+
+if (!count($files_to_transfer)) {
+	die("No files to deploy.\n");
+}
+
+// check if we currently have a settings file:
+if (file_exists($cwd . '/.rsyncdeploy')) {
+	$settings = json_decode(file_get_contents($cwd . '/.rsyncdeploy'), true);
+}
+
+//
+// get all necessary information for deployment:
+//
+
+print 'Akamai Host [' . (isset($settings['akamai_host']) ? $settings['akamai_host'] : '') . ']: ';
+if (($v = preg_replace('/([\r\n]+)$/', '', fread(STDIN, 1024))) != '') {
+            $settings['akamai_host'] = $v;
+}
+print 'Akamai Path [' . (isset($settings['akamai_path'])?$settings['akamai_path']:'') . ']: ';
+if (($v = preg_replace('/([\r\n]+)$/', '', fread(STDIN, 1024))) != '') {
+            $settings['akamai_path'] = $v;
+}
+
+
+// save all information to a '.rsyncdeploy' file:
+file_put_contents($cwd . '/.rsyncdeploy', json_encode($settings));
+
+
+$all = false;
+$files_to_purge_akamai = array();
+
+$purge_path = preg_replace('/^\/533812\//', '/', $settings['akamai_path']);
+
+// create and execute the command:
+foreach ($files_to_transfer as $file) {
+
+	// confirm file deploy:
+	if (!$all) {
+		print "Are you sure you want to deploy \"$file\" [y/N/all]? ";
+		$answer = strtolower(preg_replace('/([\r\n]+)$/', '', fread(STDIN, 1024)));
+		if ($answer != 'y' && $answer != 'all') {
+			system("rm -f $cwd/$file");
+			continue;
+		}
+		if ($answer == 'all') $all = true;
+	}
+
+  $files_to_purge_akamai["$purge_path/$file"] = true;
+}
+
+// if we have files to purge we also have files to deploy:
+if (count($files_to_purge_akamai) > 0) {
+  print "Uploading to Akamai CDN:\n";
+  $cmd = "$rsync -rzv -W --exclude=.* -e 'ssh -2' $cwd/ sshacs@$settings[akamai_host]:$settings[akamai_path]";
+  print "$cmd\n";
+  system($cmd);
+
+  print "\nSending purge request to Akamai:\n";
+  $paths = array_keys($files_to_purge_akamai);
+  if (count($paths) > 100) {
+    $cmd = 'ism purge -c 545523';
+  }
+  else {
+    $list = implode(' ', $paths);
+    $cmd = "ism purge $list";
+  }
+  print "$cmd\n";
+  system($cmd);
+}
+else {
+	print "No files to deploy.\n";
+}
+
+
+function add_files($paths) {
+	global $files, $cwd;
+
+	foreach ($paths as $path) {
+
+		if (is_dir($path)) {
+			add_files(glob("$path/*"));
+		}
+		elseif (is_file($path)) {
+			$path = preg_replace('/^' . preg_quote("$cwd/", '/') . '/', '', $path);
+			if (!in_array($path, $files)) $files[] = $path;
+		}
+	}
+}

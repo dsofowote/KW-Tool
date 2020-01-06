@@ -1,0 +1,223 @@
+.tabs-wrapper {
+    position: relative;
+}
+
+.tabs-nav {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+}
+
+.tabs-nav ul li{
+    position: relative;
+    display: inline-block;
+}
+
+.tabs-holder{
+    position: relative;
+    transition: all 1s;
+    right: 0;
+}
+
+.tabs-screen {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+
+.tabs-content {
+    position: absolute;
+    float: left;
+    left: 0px;
+    width: 100%;
+}
+
+.populate ul, .populateWords ul {
+    list-style: none;
+    width: 800px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0px;
+}
+
+.populateWords ul {
+    width: 85%;
+}
+
+.populate ul li, .populateWords ul li {
+    float: left;
+    width: 150px;
+    padding: 5px;
+    background-color: #f4f4f4;
+    margin: 5px;
+    -webkit-box-shadow: 0px 2px 13px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 13px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 13px -10px rgba(0,0,0,0.75);
+    opacity: 0;
+    transition: all 0.5s;
+    border: 1px solid #e9e9e9;
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.populateKeys ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.populateKeys ul li {
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 9px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 9px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 9px -10px rgba(0,0,0,0.75);
+    opacity: 0;
+    transition: all 0.5s;
+    position: relative;
+    top:0px;
+    list-style: none;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+    margin: 2px 0px;
+    background-color: #f1f1f1;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.populate ul li:hover {
+    -webkit-box-shadow: 0px 2px 11px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 11px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 11px -10px rgba(0,0,0,0.75);
+    color: #c6b478;
+}
+
+.populateKeys ul li:hover {
+    -webkit-box-shadow: 0px 2px 17px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 17px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 17px -10px rgba(0,0,0,0.75);
+    color: #c6b478;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sectionBox, .keywordBox {
+    height: 75px;
+    -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contentBox {
+    height: 100%;
+    -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.col-md-12.sectList {
+    background-color: #f4f4f4;
+}
+
+.col-md-3.searchButton {
+    font-size: 13px;
+    top: 4px;
+    left: 27px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input.searchBar.col-md-9 {
+    border: 1px solid #dfdfdf;
+}
+
+span.keyLength {
+    float: right;
+    width: 260px;
+    font-weight: 600;
+}
+span.keyLengthHeader {
+    float: right;
+    width: 260px;
+    right: 12px;
+    position: relative;
+}
+
+span.keyScanHeader {
+    float: right;
+    width: 60px;
+    right: 12px;
+    position: relative;
+}
+
+.scanType {
+    color: black;
+    font-size: 9px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.slide-wrapper {
+    position: relative;
+    display: initial;
+    top:0px;
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.keyList .col-md-1 {
+    width: 11.6%;
+}
+
+@media only screen and (max-width:1366px ) {
+    .key-title {
+        font-size: 10px !important;
+    }
+
+    .scanType {
+        font-size: 7px;
+    }
+
+    span.keyLength {
+        width: 180px;
+    }
+
+    .populate ul li, .populateWords ul li {
+        float: left;
+        width: 100px;
+    }
+
+    .populate ul, .populateWords ul {
+        width: 660px;
+    }
+}
+
+@media only screen and (max-width:1440px  ) {
+    .key-title {
+        font-size: 10px !important;
+    }
+
+    .scanType {
+        font-size: 7px;
+    }
+
+    span.keyLength {
+        width: 160px;
+    }
+
+    .populate ul li, .populateWords ul li {
+        float: left;
+        width: 100px;
+    }
+
+    .populate ul, .populateWords ul {
+        width: 660px;
+    }
+}

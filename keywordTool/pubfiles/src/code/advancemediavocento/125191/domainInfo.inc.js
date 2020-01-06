@@ -1,0 +1,2 @@
+integration.whiteRootDomains = ['diariovasco.com','abc.es','diariosur.es','elcomercio.es','elnortedecastilla.es','lasprovincias.es','heraldo.es','elcorreo.com','hoy.es','eldiariomontanes.es','laverdad.es','ideal.es','lavozdigital.es','diariodenavarra.es','kirolprobak.com','larioja.com','leonoticias.com','granadablogs.com','teledonosti.tv','malagaenlamesa.com','blogasturias.com','elbierzonoticias.com','muevetebasket.es','burgosconecta.es','lapreferente.com','aupaathletic.com'];
+integration.blackSubDomains = [];
